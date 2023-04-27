@@ -141,7 +141,7 @@ def ask_slot(
     }
 
 
-def delegate(active_contexts, session_attributes, intent):
+def delegate(active_contexts, session_attributes, intent, messages=[]):
     active_contexts = remove_inactive_contexts(active_contexts)
 
     return {
@@ -154,7 +154,8 @@ def delegate(active_contexts, session_attributes, intent):
             'intent': intent,
             'state': 'ReadyForFulfillment'
         },
-        'requestAttributes': {}
+        'requestAttributes': {},
+        'messages': messages
     }
 
 

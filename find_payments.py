@@ -39,6 +39,9 @@ def handler(event):
             intent,
             [coop.msg(response.get("InvalidInfo"))])
 
+    if show_payment_link is None:
+        return coop.delegate(active_contexts, session_attributes, intent)
+
     if show_payment_link and show_payment_link == 'Sí':
         student_id = student['id']
         payment_link = data_handler.payment_link(student_id)
@@ -46,7 +49,7 @@ def handler(event):
             active_contexts,
             session_attributes,
             intent,
-            [ coop.msg(response.get("ShowPaymentLink", payment_link=payment_link))])
+            [coop.msg(response.get("ShowPaymentLink", payment_link=payment_link))])
 
     owes = student["owes"]
     installments = student["installments_left"]
@@ -63,4 +66,4 @@ def handler(event):
     coop.set_session_attribute(event, "student", json.dumps(student))
     session_attributes = coop.get_session_attributes(event)
 
-    return coop.delegate(active_contexts, session_attributes, intent)
+    return coop.close(active_contexts, session_attributes, intent, messages)
