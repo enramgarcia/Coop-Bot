@@ -1,0 +1,12 @@
+{
+    "SayHi": "Bienvenido(a) {name} {last_name}, es un gusto atenderte.",
+    "ContactInfoMessage": "Los horarios de atención de la universidad son de {start_time} - {end_time} de {start_date} a {end_date}.\n\nPuede contactarnos por correo al {email} o llamando al {phone}.",
+    "ContactAddress": "Nuestra dirección la puede encontrar aquí: {address}",
+    "GetEmail": "Para poder validar su información y brindarle apoyo requiero de su correo electrónico.",
+    "ShowPaymentLink": "Para poder hacer su pago acceda al siguiente enlace: {payment_link}",
+    "NoQuotasLeft": "Felicidades, actualmente no tienes ningún saldo pendiente.",
+    "PendingQuotas": "Tienes un saldo pendiente de ${owes} divido en {installments} cuota(s).",
+    "GeneratingReportCard": "Voy a generar tu reporte de materias dame unos segundos.",
+    "NoCareerMsg": "Actualmente no cuenta con una carrera matriculada.",
+    "InvalidInfo": "Lastimosamente no he podido validar su información contra nuestros registros, por favor vuelva a intentarlo."
+}
